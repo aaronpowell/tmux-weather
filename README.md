@@ -25,7 +25,7 @@ Partly cloudy +13°C ↘13km/h | AaronSB2
 By default the format string used is `%C+%t+%w`, but you can override this with the `@forecast-format` option:
 
 ```bash
-set -g @forecast-format %C
+set -g @forecast-format '%C'+'|'+'Dusk:'+'%d'
 ```
 
 Refer to [wttr.in](http://wttr.in) for format options.
