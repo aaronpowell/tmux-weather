@@ -6,7 +6,9 @@ source "$CURRENT_DIR/helpers.sh"
 
 print_forecast() {
   local format=$(get_tmux_option @forecast-format "%C+%t+%w")
-  echo $(curl http://wttr.in/?format=$format)
+  local char_limit=$(get_tmux_option @forecast-char-limit 75)
+  local forecast=$(curl http://wttr.in/?format=$format)
+  echo ${forecast:0:$char_limit}
 }
 
 main() {

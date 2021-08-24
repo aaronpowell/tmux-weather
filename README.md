@@ -30,6 +30,13 @@ set -g @forecast-format %C
 
 Refer to [wttr.in](http://wttr.in) for format options.
 
+Moreover a character limit is enforced, in order to avoid errors trashing your status bar.
+This limit defaults to 75, but you can increase/decrease it as you wish:
+
+```bash
+set -g @forecast-char-limit 30
+```
+
 ## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
