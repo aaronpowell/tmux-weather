@@ -30,6 +30,14 @@ set -g @forecast-format %C
 
 Refer to [wttr.in](http://wttr.in) for format options.
 
+Additionally, you might want to specify the location manually, you can do so with the `@forecast-location` option:
+
+```bash
+set -g @forecast-format London
+```
+
+Refer to [wttr.in](https://wttr.in/:help) for location options.
+
 Moreover a character limit is enforced, in order to avoid errors trashing your status bar.
 This limit defaults to 75, but you can increase/decrease it as you wish:
 
