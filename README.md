@@ -33,7 +33,7 @@ Refer to [wttr.in](http://wttr.in) for format options.
 Additionally, you might want to specify the location manually, you can do so with the `@forecast-location` option:
 
 ```bash
-set -g @forecast-format London
+set -g @forecast-location London
 ```
 
 Refer to [wttr.in](https://wttr.in/:help) for location options.
