@@ -45,7 +45,7 @@ This limit defaults to 75, but you can increase/decrease it as you wish:
 set -g @forecast-char-limit 30
 ```
 
-It's posible to enable cache for weather data in file and use it instead of spamming wttr.in
+It's possible to enable cache for weather data in file and use it instead of spamming wttr.in
 service. Weather (and forecast) doesn't change every minute (or even every second) so no need to add
 extra load on wttr.in in case your status-line updated quite often.
 To enable caching just set its duration in seconds
