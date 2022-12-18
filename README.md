@@ -45,6 +45,22 @@ This limit defaults to 75, but you can increase/decrease it as you wish:
 set -g @forecast-char-limit 30
 ```
 
+It's possible to enable cache for weather data in file and use it instead of spamming wttr.in
+service. Weather (and forecast) doesn't change every minute (or even every second) so no need to add
+extra load on wttr.in in case your status-line updated quite often.
+To enable caching just set its duration in seconds
+
+```bash
+set -g @forecast-cache-duration 900 # 15 minutes
+```
+
+There is also an option where to store the cache file
+
+```bash
+# this is the default
+set -g @forecast-cache-path "/tmp/tmux-weather.cache"
+```
+
 ## Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
 
 Add plugin to the list of TPM plugins in `.tmux.conf`:
