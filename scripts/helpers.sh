@@ -21,7 +21,13 @@ get_tmux_option() {
 get_file_age() { # $1 - cache file
   local file_path="${1:-}"
   local now=$(date +%s)
-  local file_modification_timestamp=$(stat -c "%Y" "$file_path" 2>/dev/null || echo 0)
+
+  if uname | grep -q "Darwin"; then
+    local file_modification_timestamp=$(stat -f "%m" "$file_path" 2>/dev/null || echo 0)
+  else
+    local file_modification_timestamp=$(stat -c "%Y" "$file_path" 2>/dev/null || echo 0)
+  fi
+
   if [ $file_modification_timestamp -ne 0 ]; then
     echo $((now - file_modification_timestamp))
   else
