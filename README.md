@@ -45,6 +45,12 @@ This limit defaults to 75, but you can increase/decrease it as you wish:
 set -g @forecast-char-limit 30
 ```
 
+The default forecast language is English. You can change this using a two-letter language code
+
+```bash
+set -g @forecast-language "nl"
+```
+
 It's possible to enable cache for weather data in file and use it instead of spamming wttr.in
 service. Weather (and forecast) doesn't change every minute (or even every second) so no need to add
 extra load on wttr.in in case your status-line updated quite often.

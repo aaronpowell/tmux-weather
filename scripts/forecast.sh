@@ -7,7 +7,8 @@ source "$CURRENT_DIR/helpers.sh"
 get_forecast() {
   local format=$(get_tmux_option @forecast-format "%C+%t+%w")
   local location=$(get_tmux_option @forecast-location "") # Let wttr.in figure out the location
-  curl "http://wttr.in/$location?format=$format"
+  local language=$(get_tmux_option @forecast-language "en")
+  curl "http://wttr.in/$location?format=$format&lang=$language"
 }
 
 get_cached_forecast() {
