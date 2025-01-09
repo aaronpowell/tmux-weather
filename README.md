@@ -51,6 +51,15 @@ The default forecast language is English. You can change this using a two-letter
 set -g @forecast-language "nl"
 ```
 
+By default the USCS units are used for the queries from the USA and the metric system for the rest of the world.
+You can override this behavior by setting the `@forecast-units` option.
+
+```bash
+set -g @forecast-units "M" # metric (SI), but show wind speed in m/s
+```
+
+Refer to [wttr.in](https://wttr.in/:help) for units options.
+
 It's possible to enable cache for weather data in file and use it instead of spamming wttr.in
 service. Weather (and forecast) doesn't change every minute (or even every second) so no need to add
 extra load on wttr.in in case your status-line updated quite often.
